@@ -1,0 +1,20 @@
+##Pilha
+
+	*Criar_fila(N):
+		-cria um vetor de tamanho N que servirá como pilha de números.
+	*Adicionar_no_início(Objeto):
+		-move todos os números para a sua próxima posição, começando do último.
+		-adiciona o número na primeira posição do vetor.
+	*Retirar_do_começo():
+		-retira o primeiro número da lista.
+		-move todos os números seguintes uma posição para frente no vetor.
+
+##Fila
+
+	*Criar_fila(N):
+		-cria um vetor de tamanho N que servirá como fila de números.
+	*Adiocionar_no_fim(Objeto):
+		-adiciona um número na primeira posição livre disponível do vetor.
+	*Reirar_do_começo():
+		-retira o primeiro número da lista.
+		-move todos os números seguintes uma posição para frente no vetor.		

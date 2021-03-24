@@ -6,6 +6,14 @@ float J = 1;
 float V = 0;
 float p = 0;
 
+void criar_emprestimo(){
+    S = 200;
+    N = 5;
+    J = 1;
+    V = 0;
+    p = 0;
+}
+
 float proximaParcela(){
     float parc = p;
     parc = S*J/100;
