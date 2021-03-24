@@ -3,16 +3,7 @@
 float S = 200;
 int N = 5; 
 float J = 1;
-float V = 0;
 float p = 0;
-
-void criar_emprestimo(){
-    S = 200;
-    N = 5;
-    J = 1;
-    V = 0;
-    p = 0;
-}
 
 float proximaParcela(){
     float parc = p;
@@ -24,9 +15,9 @@ int main(){
     for(int i = 1; i < N+1; i++){
         if(i != 1){
             p = proximaParcela();
-            V = S + p; 
+            S += p; 
         }
-        printf("Emprestimo 1: parcela %d eh %.2f\n", i, V);
+        printf("Emprestimo 1: parcela %d eh %.2f\n", i, S);
     }
     return 0;
 }
