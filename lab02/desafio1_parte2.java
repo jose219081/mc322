@@ -20,6 +20,6 @@ p = 0;
 for(int i = 0; i < N; i++){
     p = Parcela.parcela(S, J, A, p);
     S += p;
-    System.out.println("Emprestimo 1: parcela " +i + " eh " +S);
+    System.out.println("Emprestimo 1: parcela " +A + " eh " +S);
     A++;
 }
