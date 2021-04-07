@@ -31,5 +31,5 @@ n = rand.nextInt(10000);
 System.out.println(n);
 Transformacao.numero_binario(n, b);
 for(int i = 0; i < b.length; i++){
-    System.out.println(b[i]);
+    System.out.print(b[i]);
 }
