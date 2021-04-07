@@ -1,7 +1,7 @@
 public class Transformacao{
     static int numero_binario(int n){
         int b;
-
+        
         return b;
     }
 }

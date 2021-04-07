@@ -1,15 +1,16 @@
 public class Transcricao{
     static String codificacao(String dna){
         String rna;
+        rna = "";
         for(int i = 0; i < dna.length(); i++){
-            if(dna[i] == 'A'){
-                rna[i] = 'U';
-            }else if(dna[i] == 'T'){
-                rna[i] = 'A';
-            }else if(dna[i] == 'C'){
-                rna[i] = 'G';
+            if(dna.charAt(i) == 'A'){
+                rna += 'U';
+            }else if(dna.charAt(i) == 'T'){
+                rna += 'A';
+            }else if(dna.charAt(i) == 'C'){
+                rna += 'G';
             }else{
-                rna[i] = 'C';
+                rna += 'C';
             }
         }
         return rna;
@@ -21,5 +22,5 @@ public class Transcricao{
 String dna, rna;
 dna = "ATATGGCGCATAG";
 rna = Transcricao.codificacao(dna);
-println("DNA: " + dna);
-println("RNA: " + rna);
+System.out.println("DNA: " + dna);
+System.out.println("RNA: " + rna);
