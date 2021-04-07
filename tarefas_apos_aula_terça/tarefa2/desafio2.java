@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Transformacao{
     static void numero_binario(int n, int []b){
         int r, i;
@@ -17,19 +19,17 @@ public class Transformacao{
             i++;
         }
     }
-}
-
-/////////////////////////////////////////////////////////
-
-import java.util.Random;
-
-int n;
-int b[];
-b = new int[14];
-Random rand = new Random();
-n = rand.nextInt(10000);
-System.out.println(n);
-Transformacao.numero_binario(n, b);
-for(int i = 0; i < b.length; i++){
-    System.out.println(b[i]);
+    
+    public static void main(String args[]){
+    	int n;
+	int b[];
+	b = new int[14];
+	Random rand = new Random();
+	n = rand.nextInt(10000);
+	System.out.println(n);
+	Transformacao.numero_binario(n, b);
+	for(int i = 0; i < b.length; i++){
+	    System.out.print(b[i]);
+	}
+    }
 }
