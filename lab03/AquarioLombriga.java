@@ -39,7 +39,7 @@ public class AquarioLombriga{
     }
 
     void apresenta(){
-        for(int i = 0; i < tamAq; i++){
+        for(int i = 1; i < tamAq+1; i++){
             if(i < pos || i > pos+tamLomb-1){
                 System.out.print("#");
             }else{
