@@ -1,3 +1,5 @@
+package tarefas_apos_aula_terça.tarefa2;
+
 public class Parcela{
 	public static void main(String args[]){
 		float S;
