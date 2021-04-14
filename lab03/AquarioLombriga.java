@@ -1,4 +1,4 @@
-package lab03;
+package mc322.lab03;
 
 public class AquarioLombriga{
     int tamAq, tamLomb, pos;
@@ -9,11 +9,15 @@ public class AquarioLombriga{
         this.tamLomb = pTamLomb;
         this.pos = pPos;
         this.sentido = 1;
+        if(tamLomb > tamAq){
+            this.tamAq = pTamLomb;
+        }
     }
 
     void crescer(){
-        if(pos+tamLomb < tamAq){
+        if(pos > 0){
             tamLomb += 1;
+            pos -= 1;
         }
     }
 
@@ -52,5 +56,6 @@ public class AquarioLombriga{
                 }
             }
         }
+        System.out.println();
     }
 }
