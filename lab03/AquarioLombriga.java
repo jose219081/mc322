@@ -5,10 +5,10 @@ public class AquarioLombriga{
     int sentido;//verifica pra qual lado esta virado
 
     AquarioLombriga(int pTamAq, int pTamLomb, int pPos){
-        tamAq = pTamAq;
-        tamLomb = pTamLomb;
-        pos = pPos;
-        sentido = 1;
+        this.tamAq = pTamAq;
+        this.tamLomb = pTamLomb;
+        this.pos = pPos;
+        this.sentido = 1;
     }
 
     void crescer(){
