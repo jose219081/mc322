@@ -10,7 +10,7 @@ public class Grafico{
     }
 
     public void plotarGrafico(int x){
-        for(int i = 0; i < x; i++){
+        for(int i = 1; i < x; i++){
             if(preen == false){
                 System.out.print(' ');
             }else{
