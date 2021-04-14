@@ -1,24 +1,30 @@
 package tarefas_apos_aula_terça.tarefa4;
 
 public class SegundoGrau{
-    int xi;
-    int pot;
+    int a, b, c;
+    int intervalo;
+    Grafico graf;
 
-    SegundoGrau(int pXi, int pPot){
-        this.xi = pXi;
-        this.pot = pPot;
+    SegundoGrau(int pA, int pB, int pC, int pIntervalo){
+        this.a = pA;
+        this.b = pB;
+        this.c = pC;
+        this.intervalo = pIntervalo;
+        graf = null;
     }
 
-    public int potencia(){
-        int x;
-        x = 1;
-        for(int i = 0; i < pot+1; i++){
-            if(i == 0){
-                x = 1;
-            }else{
-                x *= xi;
+    public void segundoGrauGraf(Grafico graf){
+        this.graf = graf;
+    }
+
+    public void calculo(){
+        if(graf != null){
+            int y;
+            y = 0;
+            for(int x = 0; x < intervalo; x++){
+                y = a*(x*x) + b*x + c;
+                graf.plotarGrafico(y);
             }
         }
-        return x;
     }
 }
