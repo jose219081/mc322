@@ -34,7 +34,7 @@ public class AquarioLombriga{
     }
 
     void mover(){
-        if(pos+tamLomb == tamAq+1){
+        if((pos+tamLomb == tamAq+1 && sentido == 1) || (pos == 1 && sentido == -1)){
             virar();
         }else{
             if(sentido == 1){
