@@ -12,10 +12,13 @@ public class AquarioLombriga{
         if(tamLomb > tamAq){
             this.tamAq = pTamLomb;
         }
+        if(pos > tamAq){
+            pos = 1;
+        }
     }
 
     void crescer(){
-        if(pos > 0){
+        if(pos > 0 && tamLomb < tamAq){
             tamLomb += 1;
             pos -= 1;
         }
@@ -31,7 +34,7 @@ public class AquarioLombriga{
     }
 
     void mover(){
-        if(pos+tamLomb == tamAq){
+        if(pos+tamLomb == tamAq+1){
             virar();
         }else{
             if(sentido == 1){

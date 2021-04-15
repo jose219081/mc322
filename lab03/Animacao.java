@@ -5,7 +5,7 @@ AA eh o tamanho do aquario. LL eh o tamanho da lombriga. PP eh a posiçao inicia
 comandos: M move lombriga, C cresce lombriga, V vira lombriga
 */
 public class Animacao{
-    String animacaoInicial;//ou char animacao[16]
+    String animacaoInicial;
     char animacao[];
     AquarioLombriga aqLomb;
     int p;//identaçao para verificar qual passo deve seguir
