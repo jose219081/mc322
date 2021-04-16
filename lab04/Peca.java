@@ -9,10 +9,9 @@ public class Peca{
         this.posicao = pPosicao.toCharArray();
     }
 
-    void mover(String Posicao){
-        char posposicao[] = new char[2];
-        posposicao = Posicao.toCharArray();
-        
-
+    void mover(String proxPosicao){
+        char posPosicao[] = new char[2];
+        posPosicao = proxPosicao.toCharArray();        
+        this.posicao = posPosicao;
     }
 }
