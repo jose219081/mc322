@@ -5,6 +5,7 @@ public class Tabuleiro{
     /*
     manter inacessivel ou imodificaveis as posiçoes fora do tabuleiro:
     1a,1b,2a,2b,6a,6b,7a,7b,1g,1g,2f,2g,6f,6g,7f,7g
+    obs: usei false para deixa-los inacesiveis
     */
 
     Tabuleiro(){
@@ -53,20 +54,31 @@ public class Tabuleiro{
     }
  
     void saidaGrafico(){//saida em grafico(fazer vetor de strings)
-        
-    }
-
-    void saidaVetor(){
-        char saida[] = new char[56];//eh 56 pq eh uma matriz 7 por 7 mais o \n no fim de cada linha
+        String grafico[] = new String[8];
         int I;
+        I = 0;
+        for(int k = 0; k < 7; k++){
+            grafico[I] = "" + (7-k);
+        }
         for(int i = 0; i < 7; i++){
             for(int j = 0; j < 7; j++){
-                saida[I] = tabuleiro[i][j].peca;
-                I++;
+                grafico[I] += " " + tabuleiro[i][j].peca;
             }
-            saida[I] = '\n';
             I++;
         }
-        //verificar o q eh pra faze com isso
+        grafico[7] = "  a b c d e f g";
+        //printa em stdout ver como
+    }
+
+    String saidaVetor(){
+        String saida;
+        saida = "";
+        for(int i = 0; i < 7; i++){
+            for(int j = 0; j < 7; j++){
+                saida += " " + tabuleiro[i][j].peca;
+            }
+            saida = '\n';
+        }
+        return saida;
     }
 }
