@@ -67,7 +67,9 @@ public class Tabuleiro{
             I++;
         }
         grafico[7] = "  a b c d e f g";
-        //printa em stdout ver como
+        for(int i = 0; i < 8; i++){
+            System.out.println(grafico[i]);
+        }
     }
 
     String saidaVetor(){
