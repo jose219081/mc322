@@ -16,6 +16,6 @@ public class Peca{
 
     void comer(){
         this.peca = '-';
-        this.b = false;
+        this.b = true;
     }
 }

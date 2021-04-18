@@ -11,9 +11,9 @@ public class Tabuleiro{
         for(int i = 0; i < 7; i++){
             for(int j = 0; j < 7; j++){
                 if((i == 0 || i == 1 || i == 5 ||i == 6)&&(j == 0 || j == 1 || j == 5 ||j == 6)){
-                    tabuleiro[i][j] = null;
+                    tabuleiro[i][j] = new Peca(' ', false);
                 }else if(i == 3 && j == 3){
-                    tabuleiro[i][j] = new Peca('-', false);
+                    tabuleiro[i][j] = new Peca('-', true);
                 }else{
                     tabuleiro[i][j] = new Peca('P', true);
                 }
@@ -45,14 +45,28 @@ public class Tabuleiro{
                 xm = (x1+x2)*(x2-x1)/2;
             } 
         }
-        if(tabuleiro[y2][x2].b == false && tabuleiro[ym][xm].b == true){
+        if(tabuleiro[y2][x2].b == true && tabuleiro[ym][xm].b == true){
             this.tabuleiro[y2][x2].pular();
             this.tabuleiro[y1][x1].comer();
             this.tabuleiro[ym][xm].comer();
         }
     }
  
-    void apresentar(){
+    void saidaGrafico(){//saida em grafico(fazer vetor de strings)
+        
+    }
 
+    void saidaVetor(){
+        char saida[] = new char[56];//eh 56 pq eh uma matriz 7 por 7 mais o \n no fim de cada linha
+        int I;
+        for(int i = 0; i < 7; i++){
+            for(int j = 0; j < 7; j++){
+                saida[I] = tabuleiro[i][j].peca;
+                I++;
+            }
+            saida[I] = '\n';
+            I++;
+        }
+        //verificar o q eh pra faze com isso
     }
 }
