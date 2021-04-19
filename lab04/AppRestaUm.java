@@ -47,13 +47,28 @@ public class CSVReader {
   
 }
 
-
 public class AppRestaUm{
 
     String executaJogo(){
         CSVReader csv = new CSVReader();
         csv.setDataSource("../../../src/db/arq001.csv");//modificar isso
         String commands[] = csv.requestCommands();
-        return ;
+        String passos[] = new String[commands.length];
+        Tabuleiro tabuleiro = new Tabuleiro();
+        char comando[] = new char[5];//pega a string de comando em char
+        for(int i = 0; i < commands.length; i++){
+            comando = commands[i].toCharArray();
+            if(i = 0){
+                System.out.println("Tabuleiro inicial:");
+                tabuleiro.saidaGrafico();
+                System.out.println();
+            }
+            tabuleiro.conversao(commands[i]);
+            System.out.println("Source: " + comando[0] + comando[1]);
+            System.out.println("Target: " + comando[3] + comando[4]);
+            tabuleiro.saidaGrafico();
+            passos[i] = tabuleiro.saidaVetor();
+        }
+        return passos;
     }
 }
