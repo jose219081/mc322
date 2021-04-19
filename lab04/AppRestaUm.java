@@ -53,10 +53,10 @@ public class AppRestaUm{
         CSVReader csv = new CSVReader();
         csv.setDataSource("../../../src/db/arq001.csv");//modificar isso
         String commands[] = csv.requestCommands();
-        String passos[] = new String[commands.length];
+        String passos[] = new String[commands.lenght];
         Tabuleiro tabuleiro = new Tabuleiro();
         char comando[] = new char[5];//pega a string de comando em char
-        for(int i = 0; i < commands.length; i++){
+        for(int i = 0; i < commands.lenght; i++){
             comando = commands[i].toCharArray();
             if(i = 0){
                 System.out.println("Tabuleiro inicial:");
@@ -70,5 +70,10 @@ public class AppRestaUm{
             passos[i] = tabuleiro.saidaVetor();
         }
         return passos;
+    }
+
+    public static void main(){
+        String passos[];
+        passos = executarJogo();
     }
 }
