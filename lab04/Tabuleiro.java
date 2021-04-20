@@ -79,7 +79,7 @@ public class Tabuleiro{
             for(int j = 0; j < 7; j++){
                 saida += " " + tabuleiro[i][j].peca;
             }
-            saida = '\n';
+            saida += '\n';
         }
         return saida;
     }
