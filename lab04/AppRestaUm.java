@@ -8,7 +8,7 @@ public class AppRestaUm{
 
   static String executaJogo(){
       CSVReader csv = new CSVReader();
-      csv.setDataSource("../../../mc322/lab04/testes/teste0.csv");//modificar isso
+      csv.setDataSource("home/facul/mc322/mc322/lab04/testes/teste0.csv");//modificar isso
       String commands[] = csv.requestCommands();
       String passos;
       Tabuleiro tabuleiro = new Tabuleiro();
