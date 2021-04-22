@@ -26,19 +26,39 @@ public class Tabuleiro{
         //usar para mover a peça da posicao pra proxima
         char posicao[] = new char[5]; 
         int y1, x1, y2, x2, ym, xm;//ym e xm sao as coordenadas da peça que será comida
+        boolean checandoPecas;
         posicao = Posicao.toCharArray();
         y1 = posicao[1] - '1';
         x1 = posicao[0] - 'a';
         y2 = posicao[4] - '1';
         x2 = posicao[3] - 'a';
+        y1 = 6 - y1;//correçao para ordem do tabuleiro
+        y2 = 6 - y2;//correçao para ordem do tabuleiro
+        if(y1 > 6 || y2 > 6 || x1 > 6 || x2 > 6 || y1 < 0 || y2 < 0 || x1 < 0 || x2 < 0){
+            return;
+        }
         if(y1 != y2 && x1 == x2){
+            if((y1 > y2 && y1 - y2 != 2) || (y2 > y1 && y2 - y1 != 2)){
+                return;
+            }
             xm = x2;
             ym = (y1+y2)/2;
-        }else{
+        }else if(y1 == y2 && x1 != x2){
+            if((x1 > x2 && x1 - x2 != 2) || (x2 > x1 && x2 - x1 != 2)){
+                return;
+            }
             ym = y2;
             xm = (x1+x2)/2;
+        }else{
+            return;
         }
-        if(tabuleiro[y2][x2].b == true && tabuleiro[ym][xm].b == true){
+        if((tabuleiro[y1][x1].peca == '-' && tabuleiro[y2][x2].peca == '-')
+        ||(tabuleiro[y2][x2].peca == 'P')||(tabuleiro[ym][xm].peca == '-')){
+            checandoPecas = false;
+        }else{
+            checandoPecas = true;
+        }
+        if(tabuleiro[y2][x2].b == true && tabuleiro[ym][xm].b == true && checandoPecas == true){
             this.tabuleiro[y2][x2].pular();
             this.tabuleiro[y1][x1].comer();
             this.tabuleiro[ym][xm].comer();
