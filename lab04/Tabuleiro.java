@@ -33,18 +33,10 @@ public class Tabuleiro{
         x2 = posicao[3] - 'a';
         if(y1 != y2 && x1 == x2){
             xm = x2;
-            if(y1 > y2){
-                ym = (y1+y2)*(y1-y2)/2;
-            }else{
-                ym = (y1+y2)*(y2-y1)/2;
-            }
+            ym = (y1+y2)/2;
         }else{
             ym = y2;
-            if(x1 > x2){
-                xm = (x1+x2)*(x1-x2)/2;
-            }else{
-                xm = (x1+x2)*(x2-x1)/2;
-            } 
+            xm = (x1+x2)/2;
         }
         if(tabuleiro[y2][x2].b == true && tabuleiro[ym][xm].b == true){
             this.tabuleiro[y2][x2].pular();
@@ -58,7 +50,7 @@ public class Tabuleiro{
         int I;
         I = 0;
         for(int k = 0; k < 7; k++){
-            grafico[I] = "" + (7-k);
+            grafico[k] = "" + (7-k);
         }
         for(int i = 0; i < 7; i++){
             for(int j = 0; j < 7; j++){

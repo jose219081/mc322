@@ -5,9 +5,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CSVReader {
-	private String dataSource;
-	private String[] commands;
-  
+  private String dataSource;
+  private String[] commands;
+
   public CSVReader() {
     this.commands = null;
     this.dataSource = null;
@@ -25,11 +25,11 @@ public class CSVReader {
       readCSV();
   }
 
-  
+
   public String[] requestCommands() {
     return commands;
   }
-  
+
   private void readCSV() {
     try {
       BufferedReader file = new BufferedReader(new FileReader(dataSource));
@@ -44,5 +44,5 @@ public class CSVReader {
       erro.printStackTrace();
     }
   }
-  
+
 }
