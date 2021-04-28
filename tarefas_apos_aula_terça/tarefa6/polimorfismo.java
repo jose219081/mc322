@@ -39,7 +39,7 @@ public class ListaUtil extends Lista {
 ///////////////////////////////////////////////////
 
 public class ListaUtilNoDup extends ListaUtil {
-    public void ordena() {
+   public void ordena() {
       super.ordena();
        
       int s = 0;
@@ -49,7 +49,31 @@ public class ListaUtilNoDup extends ListaUtil {
             vlista[s] = vlista[v];
          }
       ultimo = s;
-    }
+   }
 }
 //////////////////////////////////////////////////////
 
+ListaUtil l = new ListaUtil();
+ListaUtil lnd = new ListaUtilNoDup();
+l.adicionar(10);
+l.adicionar(5);
+l.adicionar(20);
+l.adicionar(5);
+l.adicionar(35);
+l.adicionar(35);
+l.adicionar(15);
+l.adicionar(10);
+l.adicionar(35);
+lnd.adicionar(10);
+lnd.adicionar(5);
+lnd.adicionar(20);
+lnd.adicionar(5);
+lnd.adicionar(35);
+lnd.adicionar(35);
+lnd.adicionar(15);
+lnd.adicionar(10);
+lnd.adicionar(35);
+l.ordena();
+lnd.ordena();
+System.out.println("ListaUtil ordenada: " + l);
+System.out.println("ListaUtilNoDup ordenada: " + lnd);
