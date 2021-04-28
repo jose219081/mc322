@@ -1,0 +1,6 @@
+O código acima irá fornecer a saída:
+Nome a: alguem(genericamente)
+Nome b: Alcebiades
+Nome c: Melissa
+Isso ocorre devido ao fato de que cada variável é inicializada com uma diferente subclasse ou com a superclasse em si, assim
+cada vez que o método getNome é requisitado ele irá agir conforme foi estabelecido na classe ou subclasse em que ele estiver.
