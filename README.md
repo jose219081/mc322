@@ -1,5 +1,5 @@
-##Aluno
+# Aluno
   José Felipe Theodoro
 
-##Curso
+# Curso
   Engenharia da Computação
