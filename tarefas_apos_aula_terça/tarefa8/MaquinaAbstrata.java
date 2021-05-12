@@ -1,9 +1,4 @@
 public abstract class ListStr {
-    String content[];
- 
-    public ListStr(String content[]) {
-       this.content = content;
-    }
      
     public abstract String first();
     
@@ -22,9 +17,10 @@ public abstract class ListStr {
 
 public class ListSequence extends ListStr {
     int I;
+    String content[];
     
     public ListSequence(String content[]){
-        super(content);
+        sthis.content = content;
     }
     
     public String first(){
@@ -42,6 +38,9 @@ public class ListSequence extends ListStr {
 }
 ///////////////////////////////////////////////////////////
 
-String content[] = {"Hello", "world", "of", "programming."};
-ListStr l = new ListSequence(content);
-l.list();
+String content1[] = {"Hello", "world", "of", "programming."};
+String content2[] = {"Olá", "mundo", "da", "programação."};
+ListStr l1 = new ListSequence(content1);
+ListStr l2 = new ListSequence(content2);
+l1.list();
+l2.list();
